@@ -139,7 +139,14 @@ fn int main(String[] args)
     height
   );
   defer texture.destroy();
-  
+  renderer.clear();
+
+  texture.update_from_surface(surface);
+  sdl3::render_texture(renderer, texture, null, null);
+
+  renderer.present();
+
+ 
   
   sdl3::Event event;
   bool run = true;
@@ -155,14 +162,6 @@ fn int main(String[] args)
       default:
         break;
     }
-    renderer.clear();
-
-    texture.update_from_surface(surface);
-
-    sdl3::render_texture(renderer, texture, null, null);
-
-    renderer.present();
-
      
     sdl3::delay(66);
   }
