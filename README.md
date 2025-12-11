@@ -40,10 +40,11 @@ sudo pacman -S c3c
 ```
 
 3. Build & Run
-bash
+```bash
 # Clone this repository
 git clone [https://github.com/AzizMejbri/PPMViewer]
 cd PPMViewer
+```
 
 # Build
 c3c build -l SDL3
