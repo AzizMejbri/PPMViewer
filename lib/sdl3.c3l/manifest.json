@@ -1,0 +1,10 @@
+{
+  "provides" : "sdl3",
+  "cc": "gcc",
+  "exec" : [],
+  "targets" : {
+    "linux-x64": {
+      "dependencies": [],
+    }
+  }
+}
