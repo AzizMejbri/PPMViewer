@@ -73,13 +73,6 @@ Check the first 3 bytes: they should be P6\n
 
 Max color value should be 255
 
-Build Errors?
-bash
-# If SDL3 not found:
-c3c build ppmviewer.c3 -l sdl3 -L/path/to/sdl3/lib -I/path/to/sdl3/include
-
-# Example for custom SDL3 location:
-c3c build ppmviewer.c3 -l sdl3 -L/usr/local/lib -I/usr/local/include
 Still Having Issues?
 Check SDL3 installation: sdl3-config --version
 
@@ -87,13 +80,6 @@ Verify C3 compiler: c3c --version
 
 Check file permissions on your PPM image
 
-📁 Project Structure
-text
-ppmviewer/
-├── ppmviewer.c3          # Main program
-├── README.md            # This file
-└── resources/
-    └── 200px-Scribus_logo.ppm  # Example image
 📋 Requirements
 C3 compiler (c3c)
 
@@ -110,12 +96,13 @@ Use -L and -I flags to specify SDL3 location
 
 Image appears wrong colors
 
-Ensure your image is PPM P6 (binary), not P3 (ASCII)
+Ensure your image is PPM P6 not P3 
 
 Check max color value is 255
 
 Tip: You can convert images to PPM P6 format using ImageMagick:
 
-bash
+```bash
 convert your-image.png -compress none your-image.ppm
+```
 Made with ❤️ using C3 + SDL3
